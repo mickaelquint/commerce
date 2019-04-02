@@ -11,10 +11,11 @@ class ProductController extends AbstractController
 {
 
     /**
-     * @Route("/", name="main_home")
+     * @Route("/", name="product_home")
      */
-    public function home(){
-        return $this->render( 'main/home.html.twig' );
+    public function index(Request $request ){
+        $getParameters = $request->query->all();
+        $postParameters = $request->query->all();
     }
 
 }

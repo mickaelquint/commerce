@@ -8,10 +8,12 @@ use Symfony\Component\Routing\Annotation\Route;
 class AddController extends AbstractController
 {
     /**
-     * @Route("/", name="add")
+     * @Route("/add", name="add")
      */
-    public function add()
+    public function index()
     {
-        return $this->render('add/index.html.twig');
+        return $this->render('add/index.html.twig', [
+            'controller_name' => 'AddController',
+        ]);
     }
 }
